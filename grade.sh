@@ -8,7 +8,13 @@ mkdir grading-area
 git clone $1 student-submission
 echo 'Finished cloning'
 
-
+files = 'find grading-area'
+if [[ -f $files && $files == ListExamples.java ]]
+then
+  echo "Found the file!"
+else
+  echo "Did not find ListExamples.java file."
+fi
 # Draw a picture/take notes on the directory structure that's set up after
 # getting to this point
 
